@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelicious - Travel Tips</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="tips.css">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <a href="HomePage.html">Home</a>
+        <a href="CountriesPage.html">Countries</a>
+        <a href="blog.html">Blog</a>
+        <a href="tips.html" class="active">Travel Tips</a>
+        
+    </nav>
+
+    <section class="hero-banner">
+        <div class="left-image" style="background-image: url('https://cdn.prod.website-files.com/61ad20e5b695cc23050e9552/6434a2ab68bc1546998728bf_Travel%20Tools%20-%20Proxi%20Maps%20(1).png'); clip-path: polygon(0 0, 80% 0, 70% 100%, 0 100%);"></div>
+        <div class="right-text">
+            <h1>Essential Travel Tips</h1>
+            <p>Practical advice and insider knowledge to help you navigate new destinations with confidence and ease.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="tips-grid">
+            
+            <div class="tip-card">
+                <div class="tip-image-container">
+                    <img src="https://i.pinimg.com/736x/66/e5/5d/66e55d0d710003f83714b98ae93d8bcd.jpg" alt="Travel Tips for Japan" class="tip-image">
+                </div>
+                <div class="tip-content">
+                    <h2 class="tip-country-name">Japan</h2>
+                    <p class="tip-text">Do carry cash. While many places accept cards, smaller shops and restaurants, especially in rural areas, are often cash-only. Don't tip; it's not customary and can even be considered rude.</p>
+                    <button class="tip-btn">Learn More!</button>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-image-container">
+                    <img src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Travel Tips for South Korea" class="tip-image">
+                </div>
+                <div class="tip-content">
+                    <h2 class="tip-country-name">South Korea</h2>
+                    <p class="tip-text">Do take off your shoes when entering homes, temples, and some restaurants. Don't be afraid to try street food, but be aware that it's often spicy!</p>
+                    <button class="tip-btn">Learn More!</button>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-image-container">
+                    <img src="https://images.unsplash.com/photo-1488747279002-c8523379faaa?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dW5pdGVkJTIwa2luZ2RvbXxlbnwwfHwwfHx8MA%3D%3D" alt="Travel Tips for United Kingdom" class="tip-image">
+                </div>
+                <div class="tip-content">
+                    <h2 class="tip-country-name">United Kingdom</h2>
+                    <p class="tip-text">Do bring a reusable water bottle; public fountains are common. Don't stand on the left side of escalators in the London Underground; it's for people walking up.</p>
+                    <button class="tip-btn">Learn More!</button>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-image-container">
+                    <img src="https://wallpapers.com/images/hd/4k-landscape-lake-lungern-switzerland-e1yv0sqq5seojy9n.jpg" alt="Travel Tips for Switzerland" class="tip-image">
+                </div>
+                <div class="tip-content">
+                    <h2 class="tip-country-name">Switzerland</h2>
+                    <p class="tip-text">Do invest in a Swiss Travel Pass if you plan on using public transport extensively. Don't be late; punctuality is highly valued and expected for meetings and appointments.</p>
+                    <button class="tip-btn">Learn More!</button>
+                </div>
+            </div>
+            
+            <div class="tip-card">
+                <div class="tip-image-container">
+                    <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Travel Tips for Canada" class="tip-image">
+                </div>
+                <div class="tip-content">
+                    <h2 class="tip-country-name">Canada</h2>
+                    <p class="tip-text">Do embrace the outdoors, but be prepared for varying weather. Don't forget to pack layers. Don't forget to tip servers and bartenders, as it's a significant part of their income.</p>
+                    <button class="tip-btn">Learn More!</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Travelicious</h3>
+                    <p>Discover the world with our travel guides, tips, and inspiring stories. We help you plan your perfect getaway.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Travel Categories</h3>
+                    <a href="#">Beach Destinations</a>
+                    <a href="#">Mountain Adventures</a>
+                    <a href="#">City Breaks</a>
+                    <a href="#">Cultural Experiences</a>
+                    <a href="#">Food Tourism</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#">Countries</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Hotels</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Wander City</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> infoTravelicious.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Travelicious Travel Blog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
