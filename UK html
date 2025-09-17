@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>United Kingdom – Wonders</title>
+</head>
+<body>
+
+  <header>
+    <h1>United Kingdom – Top 3 Wonders</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="CountriesPage.html">Countries</a> |
+    <a href="blog.html">Blog</a> |
+    <a href="traveltips.html">Travel Tips</a> |
+    <a href="about.html">About</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+
+   
+    <section>
+      <img src="" alt="Durdle Door" width="300">
+      <h2>Durdle Door</h2>
+      <p>A natural limestone arch on the Jurassic Coast of Dorset, a UNESCO World Heritage Site.</p>
+
+      <details>
+        <summary>Nearest Hotels</summary>
+        <ul>
+          <li>
+            <strong>Jurassic Coast Inn</strong> – 1 km away – ★★★★ – £140/night
+          </li>
+          <li>
+            <strong>Dorset Seaside Guesthouse</strong> – 2 km away – ★★★ – £95/night
+          </li>
+        </ul>
+      </details>
+    </section>
+
+   
+    <section>
+      <img src="" alt="Stonehenge" width="300">
+      <h2>Stonehenge</h2>
+      <p>The world-famous prehistoric stone circle in Wiltshire, built around 2500 BC.</p>
+
+      <details>
+        <summary>Nearest Hotels</summary>
+        <ul>
+          <li>
+            <strong>Stonehenge View Hotel</strong> – 1.5 km away – ★★★★ – £160/night
+          </li>
+          <li>
+            <strong>Wiltshire Heritage Inn</strong> – 3 km away – ★★★ – £110/night
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    
+    <section>
+      <img src="" alt="Giant's Causeway" width="300">
+      <h2>Giant's Causeway</h2>
+      <p>A unique area of about 40,000 interlocking basalt columns on the coast of Northern Ireland.</p>
+
+      <details>
+        <summary>Nearest Hotels</summary>
+        <ul>
+          <li>
+            <strong>Causeway Coastal Hotel</strong> – 0.5 km away – ★★★★ – £150/night
+          </li>
+          <li>
+            <strong>Antrim Coast Guesthouse</strong> – 1 km away – ★★★ – £100/night
+          </li>
+        </ul>
+      </details>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Student Name – Class Info</p>
+  </footer>
+
+</body>
+</html>
