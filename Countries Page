@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travelicious - Explore Countries</title>
+  <link rel="stylesheet" href="countries css.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="main-nav">
+    <a href="HomePage.html">Home</a>
+    <a href="CountriesPage.html" class="active">Countries</a>
+    <a href="blog.html">Blog</a>
+    <a href="tips.html">Travel Tips</a>
+    
+  </nav>
+
+  
+  <section class="hero-banner">
+    <div class="left-image"></div>
+    <div class="right-text">
+      <h1>Explore Countries</h1>
+      <p>Click on any country card to discover its wonders and nearby accommodations</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="countries-grid">
+      <div class="country-card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://flagcdn.com/jp.svg" alt="Flag of Japan" class="flag">
+            <h2 class="country-name">Japan</h2>
+            <p>Land of the Rising Sun</p>
+            <div class="click-hint">Click to explore wonders</div>
+          </div>
+          <div class="card-back">
+            <h3>Top Wonders of Japan</h3>
+            <div class="wonders-container">
+              <div class="wonder">
+                <img src="https://images.unsplash.com/photo-1576675466969-38eeae4b41f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200&q=80" alt="Mount Fuji with cherry blossoms" class="wonder-img">
+                <h4 class="wonder-title">Mount Fuji</h4>
+                <p class="wonder-desc">Japan's tallest peak and active volcano, iconic for its symmetrical cone.</p>
+                <button class="hotels-btn" onclick="event.stopPropagation(); toggleHotels(this)">Nearby Hotels</button>
+                <div class="hotels-list">
+                  <div class="hotel-item">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="Fuji View Hotel" class="hotel-img">
+                    <div class="hotel-info">
+                      <div class="hotel-name">Fuji View Hotel</div>
+                      <div class="hotel-details">2.5 km away • $120/night</div>
+                      <div class="rating">★★★★☆</div>
+                    </div>
+                  </div>
+                  <div class="hotel-item">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="Lakeside Inn" class="hotel-img">
+                    <div class="hotel-info">
+                      <div class="hotel-name">Lakeside Inn</div>
+                      <div class="hotel-details">3.8 km away • $95/night</div>
+                      <div class="rating">★★★☆☆</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wonder">
+                <img src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200&q=80" alt="Fushimi Inari Shrine" class="wonder-img">
+                <h4 class="wonder-title">Fushimi Inari Shrine</h4>
+                <p class="wonder-desc">Famous for its thousands of vermilion torii gates in Kyoto.</p>
+                <button class="hotels-btn" onclick="event.stopPropagation(); toggleHotels(this)">Nearby Hotels</button>
+                <div class="hotels-list">
+                  <div class="hotel-item">
+                    <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="Kyoto Traditional Inn" class="hotel-img">
+                    <div class="hotel-info">
+                      <div class="hotel-name">Kyoto Traditional Inn</div>
+                      <div class="hotel-details">0.8 km away • $145/night</div>
+                      <div class="rating">★★★★☆</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wonder">
+                <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200&q=80" alt="Tokyo Skytree" class="wonder-img">
+                <h4 class="wonder-title">Tokyo Skytree</h4>
+                <p class="wonder-desc">The tallest tower in Japan offering panoramic views of Tokyo.</p>
+                <button class="hotels-btn" onclick="event.stopPropagation(); toggleHotels(this)">Nearby Hotels</button>
+                <div class="hotels-list">
+                  <div class="hotel-item">
+                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="Tokyo City Hotel" class="hotel-img">
+                    <div class="hotel-info">
+                      <div class="hotel-name">Tokyo City Hotel</div>
+                      <div class="hotel-details">1.2 km away • $160/night</div>
+                      <div class="rating">★★★★★</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="back-btn" onclick="event.stopPropagation(); unflipCard(this)">Back to Countries</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="country-card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front" style="background: linear-gradient(45deg, #ff7675, #d63031);">
+            <img src="https://flagcdn.com/kr.svg" alt="Flag of South Korea" class="flag">
+            <h2 class="country-name">South Korea</h2>
+            <p>Land of the Morning Calm</p>
+            <div class="click-hint">Click to explore wonders</div>
+          </div>
+          <div class="card-back">
+            <h3>Top Wonders of South Korea</h3>
+            <div class="wonders-container">
+              <div class="wonder">
+                <img src="https://tong.visitkorea.or.kr/cms/resource/33/2678633_image2_1.jpg" alt="Gyeongbokgung Palace" class="wonder-img">
+                <h4 class="wonder-title">Gyeongbokgung Palace</h4>
+                <p class="wonder-desc">The largest of the Five Grand Palaces built during the Joseon Dynasty.</p>
+                <button class="hotels-btn" onclick="event.stopPropagation(); toggleHotels(this)">Nearby Hotels</button>
+                <div class="hotels-list">
+                  <div class="hotel-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ2Xfpt5fbqdyNQxmOmOWiSDkuaGT8lx0LZQ&s" alt="Seoul Palace Hotel" class="hotel-img">
+                    <div class="hotel-info">
+                      <div class="hotel-name">Seoul Palace Hotel</div>
+                      <div class="hotel-details">0.5 km away • $110/night</div>
+                      <div class="rating">★★★★☆</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wonder">
+                <img src="https://media.audleytravel.com/-/media/images/home/north-asia-and-russia/south-korea/places/istock_533230524_jeju_island_letterbox.jpg?q=79&w=1920&h=685" alt="Jeju Island" class="wonder-img">
+                <h4 class="wonder-title">Jeju Island</h4>
+                <p class="wonder-desc">Volcanic island known for its beach resorts and volcanic landscape.</p>
+                <button class="hotels-btn" onclick="event.stopPropagation(); toggleHotels(this)">Nearby Hotels</button>
+                <div class="hotels-list">
+                  <div class="hotel-item">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="Jeju Resort" class="hotel-img">
+                    <div class="hotel-info">
+                      <div class="hotel-name">Jeju Resort</div>
+                      <div class="hotel-details">On the beach • $180/night</div>
+                      <div class="rating">★★★★★</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wonder">
+                <img src="https://traveltradejournal.com/wp-content/uploads/2022/09/Korea.jpg" alt="Bukchon Hanok Village" class="wonder-img">
+                <h4 class="wonder-title">Bukchon Hanok Village</h4>
+                <p class="wonder-desc">Traditional Korean village with hundreds of preserved houses.</p>
+                <button class="hotels-btn" onclick="event.stopPropagation(); toggleHotels(this)">Nearby Hotels</button>
+                <div class="hotels-list">
+                  <div class="hotel-item">
+                    <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="Traditional Stay" class="hotel-img">
+                    <div class="hotel-info">
+                      <div class="hotel-name">Traditional Stay</div>
+                      <div class="hotel-details">Within the village • $130/night</div>
+                      <div class="rating">★★★★☆</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="back-btn" onclick="event.stopPropagation(); unflipCard(this)">Back to Countries</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="country-card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front" style="background: linear-gradient(45deg, #6c5ce7, #a29bfe);">
+            <img src="https://flagcdn.com/ca.svg" alt="Flag of Canada" class="flag">
+            <h2 class="country-name">Canada</h2>
+            <p>The Great White North</p>
+            <div class="click-hint">Click to explore wonders</div>
+          </div>
+          <div class="card-back">
+            <h3>Top Wonders of Canada</h3>
+            <div class="wonders-container">
+              <div class="wonder">
+                <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200&q=80" alt="Banff National Park" class="wonder-img">
+                <h4 class="wonder-title">Banff National Park</h4>
+                <p class="wonder-desc">Canada's first national park with stunning mountain scenery and glacial lakes.</p>
+                <button class="hotels-btn" onclick="event.stopPropagation(); toggleHotels(this)">Nearby Hotels</button>
+                <div class="hotels-list">
+                  <div class="hotel-item">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="Mountain View Lodge" class="hotel-img">
+                    <div class="hotel-info">
+                      <div class="hotel-name">Mountain View Lodge</div>
+                      <div class="hotel-details">5 km away • $150/night</div>
+                      <div class="rating">★★★★☆</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wonder">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/3Falls_Niagara.jpg/1200px-3Falls_Niagara.jpg" alt="Niagara Falls" class="wonder-img">
+                <h4 class="wonder-title">Niagara Falls</h4>
+                <p class="wonder-desc">Famous waterfall on the border between Canada and the United States.</p>
+                <button class="hotels-btn" onclick="event.stopPropagation(); toggleHotels(this)">Nearby Hotels</button>
+                <div class="hotels-list">
+                  <div class="hotel-item">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="Fallsview Hotel" class="hotel-img">
+                    <div class="hotel-info">
+                      <div class="hotel-name">Fallsview Hotel</div>
+                      <div class="hotel-details">0.5 km away • $200/night</div>
+                      <div class="rating">★★★★★</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wonder">
+                <img src="https://breathedreamgo.com/wp-content/uploads/2014/05/CN-Tower-BCL-600.jpg" alt="CN Tower" class="wonder-img">
+                <h4 class="wonder-title">CN Tower</h4>
+                <p class="wonder-desc">Iconic 553-meter tall tower in downtown Toronto with observation decks.</p>
+                <button class="hotels-btn" onclick="event.stopPropagation(); toggleHotels(this)">Nearby Hotels</button>
+                <div class="hotels-list">
+                  <div class="hotel-item">
+                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="Downtown Toronto Hotel" class="hotel-img">
+                    <div class="hotel-info">
+                      <div class="hotel-name">Downtown Toronto Hotel</div>
+                      <div class="hotel-details">0.3 km away • $180/night</div>
+                      <div class="rating">★★★★☆</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="back-btn" onclick="event.stopPropagation(); unflipCard(this)">Back to Countries</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="country-card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front" style="background: linear-gradient(45deg, #00b894, #00cec9);">
+            <img src="https://flagcdn.com/gb.svg" alt="Flag of United Kingdom" class="flag">
+            <h2 class="country-name">United Kingdom</h2>
+            <p>Land of History and Tradition</p>
+            <div class="click-hint">Click to explore wonders</div>
+          </div>
+          <div class="card-back">
+            <h3>Top Wonders of United Kingdom</h3>
+            <div class="wonders-container">
+              <div class="wonder">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFYQ2xi-FFAF0zh3j2Sj0d02OwdWlnqC06jw&s" alt="Stonehenge" class="wonder-img">
+                <h4 class="wonder-title">Stonehenge</h4>
+                <p class="wonder-desc">Prehistoric monument consisting of a ring of standing stones.</p>
+                <button class="hotels-btn" onclick="event.stopPropagation(); toggleHotels(this)">Nearby Hotels</button>
+                <div class="hotels-list">
+                  <div class="hotel-item">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="Heritage Inn" class="hotel-img">
+                    <div class="hotel-info">
+                      <div class="hotel-name">Heritage Inn</div>
+                      <div class="hotel-details">3 km away • $120/night</div>
+                      <div class="rating">★★★☆☆</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wonder">
+                <img src="https://res.cloudinary.com/dtljonz0f/image/upload/c_auto,ar_4:3,w_3840,g_auto/f_auto/q_auto/v1/shutterstock_1528650821_1_uufc2z?_a=BAVAZGE70" alt="Tower of London" class="wonder-img">
+                <h4 class="wonder-title">Tower of London</h4>
+                <p class="wonder-desc">Historic castle on the north bank of the River Thames in central London.</p>
+                <button class="hotels-btn" onclick="event.stopPropagation(); toggleHotels(this)">Nearby Hotels</button>
+                <div class="hotels-list">
+                  <div class="hotel-item">
+                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="Riverside Hotel" class="hotel-img">
+                    <div class="hotel-info">
+                      <div class="hotel-name">Riverside Hotel</div>
+                      <div class="hotel-details">0.8 km away • $190/night</div>
+                      <div class="rating">★★★★☆</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wonder">
+                <img src="https://cdn.britannica.com/24/94424-050-6302BA2E/Edinburgh-Castle-Scotland.jpg" alt="Edinburgh Castle" class="wonder-img">
+                <h4 class="wonder-title">Edinburgh Castle</h4>
+                <p class="wonder-desc">Historic fortress dominating the skyline of Edinburgh, Scotland.</p>
+                <button class="hotels-btn" onclick="event.stopPropagation(); toggleHotels(this)">Nearby Hotels</button>
+                <div class="hotels-list">
+                  <div class="hotel-item">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="Castle View Hotel" class="hotel-img">
+                    <div class="hotel-info">
+                      <div class="hotel-name">Castle View Hotel</div>
+                      <div class="hotel-details">0.5 km away • $160/night</div>
+                      <div class="rating">★★★★☆</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="back-btn" onclick="event.stopPropagation(); unflipCard(this)">Back to Countries</button>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="country-card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front" style="background: linear-gradient(45deg, #fd79a8, #e84393);">
+            <img src="https://flagcdn.com/ch.svg" alt="Flag of Switzerland" class="flag">
+            <h2 class="country-name">Switzerland</h2>
+            <p>Heart of the Alps</p>
+            <div class="click-hint">Click to explore wonders</div>
+          </div>
+          <div class="card-back">
+            <h3>Top Wonders of Switzerland</h3>
+            <div class="wonders-container">
+              <div class="wonder">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200&q=80" alt="Matterhorn" class="wonder-img">
+                <h4 class="wonder-title">Matterhorn</h4>
+                <p class="wonder-desc">Iconic pyramid-shaped mountain in the Swiss Alps near Zermatt.</p>
+                <button class="hotels-btn" onclick="event.stopPropagation(); toggleHotels(this)">Nearby Hotels</button>
+                <div class="hotels-list">
+                  <div class="hotel-item">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="Alpine Resort" class="hotel-img">
+                    <div class="hotel-info">
+                      <div class="hotel-name">Alpine Resort</div>
+                      <div class="hotel-details">2 km away • $220/night</div>
+                      <div class="rating">★★★★★</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wonder">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200&q=80" alt="Jungfraujoch" class="wonder-img">
+                <h4 class="wonder-title">Jungfraujoch</h4>
+                <p class="wonder-desc">Highest railway station in Europe with breathtaking alpine views.</p>
+                <button class="hotels-btn" onclick="event.stopPropagation(); toggleHotels(this)">Nearby Hotels</button>
+                <div class="hotels-list">
+                  <div class="hotel-item">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="Mountain Retreat" class="hotel-img">
+                    <div class="hotel-info">
+                      <div class="hotel-name">Mountain Retreat</div>
+                      <div class="hotel-details">3 km away • $180/night</div>
+                      <div class="rating">★★★★☆</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wonder">
+                <img src="https://deih43ym53wif.cloudfront.net/large_chillon-castle-geneva-lake-switzerland-shutterstock_361751813_fbaba5c297.jpeg" alt="Lake Geneva" class="wonder-img">
+                <h4 class="wonder-title">Lake Geneva</h4>
+                <p class="wonder-desc">One of the largest lakes in Western Europe with stunning scenery.</p>
+                <button class="hotels-btn" onclick="event.stopPropagation(); toggleHotels(this)">Nearby Hotels</button>
+                <div class="hotels-list">
+                  <div class="hotel-item">
+                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="Lakeside Hotel" class="hotel-img">
+                    <div class="hotel-info">
+                      <div class="hotel-name">Lakeside Hotel</div>
+                      <div class="hotel-details">On the lake • $210/night</div>
+                      <div class="rating">★★★★★</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="back-btn" onclick="event.stopPropagation(); unflipCard(this)">Back to Countries</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="page-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Travelicious</h3>
+                    <p>Discover the world with our travel guides, tips, and inspiring stories. We help you plan your perfect getaway.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Travel Categories</h3>
+                    <a href="#">Beach Destinations</a>
+                    <a href="#">Mountain Adventures</a>
+                    <a href="#">City Breaks</a>
+                    <a href="#">Cultural Experiences</a>
+                    <a href="#">Food Tourism</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#">Countries</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Hotels</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Wander City</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> infoTravelicious.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Travelicious Travel Blog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+  function flipCard(card) {
+    card.classList.toggle('flipped');
+  }
+
+  function unflipCard(button) {
+    
+    let countryCard = button.closest('.country-card');
+    if (countryCard) {
+      countryCard.classList.remove('flipped');
+    }
+  }
+
+
+  function toggleHotels(button) {
+    const hotelsList = button.nextElementSibling; 
+    if (hotelsList) {
+      hotelsList.style.display = hotelsList.style.display === 'block' ? 'none' : 'block';
+    }
+  }
+</script>
+</body>
+</html>
