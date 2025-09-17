@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canada – Wonders</title>
+</head>
+<body>
+
+  <header>
+    <h1>Canada – Top 3 Wonders</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="CountriesPage.html">Countries</a> |
+    <a href="blog.html">Blog</a> |
+    <a href="traveltips.html">Travel Tips</a> |
+    
+  </nav>
+
+  <main>
+
+    <section>
+      <img src="your-image-here.jpg" alt="Niagara Falls" width="300">
+      <h2>Niagara Falls</h2>
+      <p>One of the world’s most famous waterfalls, straddling the border between Canada and the USA.</p>
+
+      <details>
+        <summary>Nearest Hotels</summary>
+        <ul>
+          <li>
+            <strong>Falls View Hotel</strong> – 0.3 km away – ★★★★ – $200/night
+          </li>
+          <li>
+            <strong>Niagara River Inn</strong> – 0.8 km away – ★★★ – $140/night
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    <section>
+      <img src="your-image-here.jpg" alt="Northern Lights" width="300">
+      <h2>Northern Lights</h2>
+      <p>The dazzling natural light display visible in Canada’s northern regions, especially Yukon and Northwest Territories.</p>
+
+      <details>
+        <summary>Nearest Hotels</summary>
+        <ul>
+          <li>
+            <strong>Aurora Lodge</strong> – 1 km away – ★★★★ – $180/night
+          </li>
+          <li>
+            <strong>Polar Sky Guesthouse</strong> – 2 km away – ★★★ – $120/night
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    <section>
+      <img src="your-image-here.jpg" alt="Canadian Rocky Mountains" width="300">
+      <h2>Canadian Rocky Mountains</h2>
+      <p>A majestic mountain range stretching through Alberta and British Columbia, known for its scenic beauty and wildlife.</p>
+
+      <details>
+        <summary>Nearest Hotels</summary>
+        <ul>
+          <li>
+            <strong>Rocky Mountain Resort</strong> – 0.5 km away – ★★★★ – $220/night
+          </li>
+          <li>
+            <strong>Alpine View Lodge</strong> – 1 km away – ★★★ – $150/night
+          </li>
+        </ul>
+      </details>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Student Name – Class Info</p>
+  </footer>
+
+</body>
+</html>
