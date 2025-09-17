@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travelicious - Explore the World</title>
+  <link rel="stylesheet" href="Home css.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+  <header>
+    <div class="logo">Travelicious</div>
+    <nav>
+      <a href="HomePage.html" class="active">Home</a>
+      <a href="CountriesPage.html">Countries</a>
+      <a href="blog.html">Blog</a>
+      <a href="tips.html">Travel Tips</a>
+      
+    </nav>
+  </header>
+
+  <section class="hero animate-on-scroll">
+    <div class="hero-text">
+      <h1>Travelicious</h1>
+      <p>Discover breathtaking destinations, wonders, and hidden gems worldwide.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+      <a href="countries.html" class="btn">Start Your Journey</a>
+    </div>
+    <div class="hero-image">
+      <img src="beautiful-lake-mountains_395237-44.jpg" alt="Beautiful Lake and Mountains" />
+    </div>
+  </section>
+
+  <section class="intro animate-on-scroll">
+    <div class="image">
+      <img src="beautiful-lake-mountains_395237-44.jpg" alt="Scenic Destination" />
+    </div>
+    <div class="text">
+      <h2>Welcome to Travelicious!</h2>
+      <p>
+        Your ultimate travel companion designed to inspire and guide your next adventure.
+      </p>
+      <p>
+        Explore destinations, read our blog, and get the best travel tips to make your journey unforgettable.
+      </p>
+    </div>
+  </section>
+
+  <section class="intro reverse animate-on-scroll">
+    <div class="image">
+      <img src="ang ganda nya 4.jpg" alt="Exotic Destination" />
+    </div>
+    <div class="text">
+      <h2>Discover More</h2>
+      <p>
+        We showcase some of the world’s most stunning destinations, from cultural heritage sites to natural wonders.
+      </p>
+    </div>
+  </section>
+
+  <div class="cta animate-on-scroll">
+    <button onclick="window.location.href='countries.html'">Start Your Journey Now</button>
+  </div>
+
+  <footer>
+    <p>Apellanes, Juan Raphael S.– IT3G 2nd year </p>
+  </footer>
+
+  <script>
+    // Scroll animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
