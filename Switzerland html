@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Switzerland – Wonders</title>
+</head>
+<body>
+
+  <header>
+    <h1>Switzerland – Top 3 Wonders</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="CountriesPage.html">Countries</a> |
+    <a href="blog.html">Blog</a> |
+    <a href="traveltips.html">Travel Tips</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+
+    <section>
+      <img src="" alt="Matterhorn" width="300">
+      <h2>Matterhorn</h2>
+      <p>One of the highest peaks in the Alps, famous for its nearly symmetrical pyramid shape on the Switzerland–Italy border.</p>
+
+      <details>
+        <summary>Nearest Hotels</summary>
+        <ul>
+          <li>
+            <strong>Alpine View Hotel</strong> – 1 km away – ★★★★ – $220/night
+          </li>
+          <li>
+            <strong>Swiss Mountain Lodge</strong> – 2 km away – ★★★ – $150/night
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    <section>
+      <img src="" alt="Rhine Falls" width="300">
+      <h2>Rhine Falls</h2>
+      <p>Europe’s largest waterfall, located on the High Rhine near the town of Schaffhausen.</p>
+
+      <details>
+        <summary>Nearest Hotels</summary>
+        <ul>
+          <li>
+            <strong>Rhine View Hotel</strong> – 0.5 km away – ★★★★ – $180/night
+          </li>
+          <li>
+            <strong>Waterfall Guesthouse</strong> – 1 km away – ★★★ – $120/night
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    <section>
+      <img src="" alt="The Castles of Bellinzona" width="300">
+      <h2>The Castles of Bellinzona</h2>
+      <p>A UNESCO World Heritage site featuring three well-preserved medieval castles in southern Switzerland.</p>
+
+      <details>
+        <summary>Nearest Hotels</summary>
+        <ul>
+          <li>
+            <strong>Bellinzona Castle Inn</strong> – 0.3 km away – ★★★★ – $160/night
+          </li>
+          <li>
+            <strong>Ticino Heritage Hotel</strong> – 0.8 km away – ★★★ – $130/night
+          </li>
+        </ul>
+      </details>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Student Name – Class Info</p>
+  </footer>
+
+</body>
+</html>
