@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>South Korea – Wonders</title>
+</head>
+<body>
+
+  <header>
+    <h1>South Korea – Top 3 Wonders</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="CountriesPage.html">Countries</a> |
+    <a href="blog.html">Blog</a> |
+    <a href="traveltips.html">Travel Tips</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+
+    
+    <section>
+      <img src="your-image-here.jpg" alt="Bukchon Hanok Village" width="300">
+      <h2>Bukchon Hanok Village</h2>
+      <p>A traditional Korean village in Seoul featuring hundreds of preserved hanok houses from the Joseon Dynasty.</p>
+
+      <details>
+        <summary>Nearest Hotels</summary>
+        <ul>
+          <li>
+            <strong>Bukchon Heritage Guesthouse</strong> – 0.2 km away – ★★★ – $80/night
+          </li>
+          <li>
+            <strong>Seoul Hanok Stay</strong> – 0.5 km away – ★★★★ – $120/night
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    
+    <section>
+      <img src="your-image-here.jpg" alt="Gyeongbokgung Palace" width="300">
+      <h2>Gyeongbokgung Palace</h2>
+      <p>The grandest of Seoul’s Five Grand Palaces, originally built in 1395 and rich with Korean history.</p>
+
+      <details>
+        <summary>Nearest Hotels</summary>
+        <ul>
+          <li>
+            <strong>Palace View Hotel</strong> – 0.4 km away – ★★★★ – $150/night
+          </li>
+          <li>
+            <strong>Royal Stay Seoul</strong> – 0.7 km away – ★★★ – $110/night
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    
+    <section>
+      <img src="your-image-here.jpg" alt="Seoraksan National Park" width="300">
+      <h2>Seoraksan National Park</h2>
+      <p>A stunning national park known for its jagged peaks, rich biodiversity, and scenic hiking trails.</p>
+
+      <details>
+        <summary>Nearest Hotels</summary>
+        <ul>
+          <li>
+            <strong>Seoraksan Mountain Lodge</strong> – 1 km away – ★★★★ – $130/night
+          </li>
+          <li>
+            <strong>Nature View Pension</strong> – 2 km away – ★★★ – $90/night
+          </li>
+        </ul>
+      </details>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Student Name – Class Info</p>
+  </footer>
+
+</body>
+</html>
