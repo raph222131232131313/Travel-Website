@@ -1,0 +1,869 @@
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tip-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.tip-image-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.tip-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tip-card:hover .tip-image {
+    transform: scale(1.1);
+}
+
+.tip-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.tip-country-name {
+    font-size: 1.8rem;
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+.tip-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.tip-btn {
+    background: #00bfff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.tip-btn:hover {
+    background: #0099cc;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.5;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.main-nav a {
+  margin: 0 20px;
+  color: #555;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  padding: 5px;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+.main-nav a:hover,
+.main-nav a.active {
+  color: #007BFF;
+}
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007BFF;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  transform: scaleX(1);
+}
+
+.hero-banner {
+  display: flex;
+  height: 350px;
+  overflow: hidden;
+}
+.left-image {
+  flex: 1;
+  background-image: url('ang ganda nya 3.jpg'); 
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 80% 0, 70% 100%, 0 100%);
+  transition: transform 0.6s ease;
+}
+.left-image:hover {
+  transform: scale(1.05);
+}
+.right-text {
+  flex: 1;
+  background: #ffffff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.right-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #333;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeInRight 1s forwards 0.5s;
+}
+.right-text p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  max-width: 450px;
+  color: #666;
+}
+.social-icons {
+  margin-top: 20px;
+}
+.social-icons a {
+  margin-right: 15px;
+  font-size: 1.4rem;
+  color: #333;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: #007BFF;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.countries-content {
+  display: flex;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.country-list {
+  flex: 1;
+  background: #f7f7f7;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.country-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.country-item:hover {
+  background: #e6f0ff;
+  transform: translateX(5px);
+}
+.country-item img {
+  width: 40px;
+  height: auto;
+}
+.country-description {
+  flex: 2;
+  padding: 40px;
+  background: #fff;
+  color: #333;
+}
+
+.page-footer {
+  text-align: center;
+  padding: 20px;
+  background: #f7f7f7;
+  color: #777;
+  margin-top: 40px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 18px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.main-nav a {
+  margin: 0 25px;
+  color: #555;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+.main-nav a:hover,
+.main-nav a.active {
+  color: #00bfff;
+}
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #00bfff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  transform: scaleX(1);
+}
+
+
+.hero-banner {
+  display: flex;
+  height: 360px;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 40px auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.left-image {
+  flex: 1;
+  background-image: url('ang ganda nya 3.jpg');
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 80% 0, 70% 100%, 0 100%);
+  transition: transform 0.6s ease;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.left-image:hover {
+  transform: scale(1.05);
+}
+.right-text {
+  flex: 1;
+  background: #fff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.right-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #0077b6;
+  animation: fadeInRight 1s forwards 0.5s;
+}
+.right-text p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  max-width: 450px;
+  color: #666;
+}
+.social-icons {
+  margin-top: 20px;
+}
+.social-icons a {
+  margin-right: 15px;
+  font-size: 1.4rem;
+  color: #333;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: #00bfff;
+}
+
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.country-card {
+  perspective: 1000px;
+  height: 380px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+}
+
+.country-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card-front {
+  background: linear-gradient(45deg, #74b9ff, #0984e3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-back {
+  background: white;
+  transform: rotateY(180deg);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.flag {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.country-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.click-hint {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.wonders-container {
+  margin-top: 15px;
+}
+
+.wonder {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.wonder-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.wonder-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3436;
+  margin-bottom: 5px;
+}
+
+.wonder-desc {
+  font-size: 0.9rem;
+  color: #636e72;
+  margin-bottom: 10px;
+}
+
+.hotels-btn {
+  background: #0984e3;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 5px;
+}
+
+.hotels-btn:hover {
+  background: #0056b3;
+}
+
+.hotels-list {
+  background: #e8f4fc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+  display: none;
+}
+
+.hotel-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d1e9fb;
+}
+
+.hotel-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.hotel-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.hotel-info {
+  flex: 1;
+}
+
+.hotel-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.hotel-details {
+  font-size: 0.8rem;
+  color: #636e72;
+}
+
+.rating {
+  color: #fdcb6e;
+  font-size: 0.9rem;
+}
+
+.back-btn {
+  background: #636e72;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: #2d3436;
+}
+
+
+.page-footer {
+  text-align: center;
+  padding: 25px;
+  background: #f0f8ff;
+  color: #555;
+  font-size: 0.95rem;
+  margin-top: 60px;
+  border-top: 1px solid #ddd;
+}
+
+
+@media (max-width: 900px) {
+  .hero-banner {
+    flex-direction: column;
+    height: auto;
+    margin: 30px 20px;
+  }
+  .left-image,
+  .right-text {
+    border-radius: 15px;
+  }
+  .left-image {
+    clip-path: none;
+    height: 250px;
+  }
+  .right-text {
+    padding: 30px 20px;
+    text-align: center;
+  }
+  .countries-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-nav a {
+    margin: 0 12px;
+    font-size: 0.9rem;
+  }
+  .right-text h1 {
+    font-size: 2rem;
+  }
+  .right-text p {
+    font-size: 1rem;
+  }
+  .countries-grid {
+    grid-template-columns: 1fr;
+  }
+  .country-card {
+    height: 350px;
+  }
+}
+
+
+.page-footer {
+            text-align: center;
+            padding: 25px;
+            background: #f0f8ff;
+            color: #555;
+            font-size: 0.95rem;
+            margin-top: 60px;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #0077b6;
+        }
+
+        .footer-column p, .footer-column a {
+            color: #555;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: #00bfff;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #00bfff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.country-card {
+  perspective: 1000px; 
+  height: 380px;
+  cursor: pointer;
+  border-radius: 15px; 
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s; 
+  transform-style: preserve-3d; 
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+}
+
+
+.country-card.flipped .card-inner {
+  transform: rotateY(180deg); 
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden; 
+  border-radius: 15px; 
+  overflow: hidden; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 20px;
+  text-align: center;
+}
+
+.card-front {
+  background: linear-gradient(45deg, #74b9ff, #0984e3); 
+  color: white;
+}
+
+.card-back {
+  background: white; 
+  transform: rotateY(180deg); 
+  overflow-y: auto; 
+  color: #333; 
+  
+  justify-content: flex-start;
+}
+
+.flag {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.country-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.click-hint {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.wonders-container {
+  margin-top: 15px;
+  width: 100%; 
+}
+
+.wonder {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+.wonder-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.wonder-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3436;
+  margin-bottom: 5px;
+}
+
+.wonder-desc {
+  font-size: 0.9rem;
+  color: #636e72;
+  margin-bottom: 10px;
+}
+
+.hotels-btn {
+  background: #0984e3;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 1rem; 
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px; 
+}
+
+.hotels-btn:hover {
+  background: #0056b3;
+}
+
+.hotels-list {
+  margin-top: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.hotel-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.hotel-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.hotel-info {
+  flex-grow: 1;
+}
+
+.hotel-name {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+.hotel-details {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 3px;
+}
+
+.rating {
+  font-size: 0.9rem;
+  color: #f39c12; 
+}
+
+.back-btn {
+  background: #6c757d; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 20px; 
+}
+
+.back-btn:hover {
+  background: #5a6268;
+}
